@@ -29,18 +29,18 @@ function App() {
         <button className="exportButton" onClick={() => excelExportComponent.current.save()}>Export as Excel</button>
       </div>
 
-      <PDFExport ref={pdfExportComponent} paperSize="Letter" landscape={true} scale={0.7}>
+      <PDFExport margin={{ top: 10, left: 10, right: 10, bottom: 20 }} ref={pdfExportComponent} paperSize="Letter" landscape={true} scale={0.6}>
       <Grid
         className="grid-style"
         data={data}
       >
-          <Column field="txnDate" title="txnDate" width="160px" />
-          <Column field="valueDate" title="valueDate" width="160px" />
-          <Column field="description" title="description" width="160px" wrap={true}  />
-          <Column field="reference" title="reference" width="160px" />
-          <Column field="debits" title="debits" width="160px" />
-          <Column field="credits" title="credits" width="160px" />
-          <Column field="balance" title="balance" width="160px" />
+          <Column field="txnDate" title="txnDate" width="180px" />
+          <Column field="valueDate" title="valueDate" width="180px" />
+          <Column field="description" title="description" width="180px" wrap={true}  />
+          <Column field="reference" title="reference" width="180px" />
+          <Column field="debits" title="debits" width="180px" />
+          <Column field="credits" title="credits" width="180px" />
+          <Column field="balance" title="balance" width="180px" />
         </Grid>
       </PDFExport>
 
